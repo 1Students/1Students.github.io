@@ -34,23 +34,7 @@
 		<h1> <a href="./one.html">点击</a></h1>
 
 		<div class="wrapper">
-				<!-- <ul class="max-box">
-					<li class="img1"></li>
-					<li class="img2"></li>
-					<li class="img3"></li>
-					<li class="img4"></li>
-					<li class="img5"></li>
-					<li class="img6"></li>
-				</ul>
-	
-				<ul class="min-box">
-					<li class="img1"></li>
-					<li class="img2"></li>
-					<li class="img3"></li>
-					<li class="img4"></li>
-					<li class="img5"></li>
-					<li class="img6"></li>
-				</ul> -->
+			
 			</div>
 		<h1 class="element"></h1>
 		<div id="app">
@@ -67,6 +51,14 @@
 
 
 </body>
+<script >
+	var audo = document.getElementById('myaudio');
+	audo.play();
+	document.addEventListener('WeixinJSBridgeReady', function () {
+	audo.play();
+	}, false);
+</script>
+
 <script>
 	new Vue({
 		el: '#app',
@@ -94,7 +86,7 @@
 			}
 		},
 		created() {
-
+			this.mps();	
 		},
 		methods: {
 			start() {
@@ -141,13 +133,6 @@
 		},
 	})
 
-</script>
-<script type="text/javascript">
-	var audo = document.getElementById('myaudio');
-	audo.play();
-	document.addEventListener('WeixinJSBridgeReady', function () {
-	audo.play();
-	}, false);
 </script>
 
 </html>

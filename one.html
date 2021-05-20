@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>CSS3 3D酷炫动画旋转相册</title>
-		<link rel="stylesheet" href="./xuanzhuan.css">
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-		<style type="text/css">
-			.bods{
-				display: flex;
-				flex-direction: column;
-			}
-			.bods p img{
-				width: 100%;
-				height: 100%;
-				/* width: 375px; */
-				/* height: 100px; */
-			}
-			#bgcolor{
-			width: 100%;
-			/* height: 100%; */
-			background-image: url('https://cdnoss.zhizuoh5.com/syspic/scene/FjJJ01xZKZzH2UgEhJ0L_6HaL8Yj.png?x-oss-process=style/w750&t=1');
-     		background-size: 100%;
-			position: fixed; 
-           }
-      
-           .foot H1{
-               font-size: 50px;
-           }
-           .box {
+
+<head>
+    <meta charset="utf-8" />
+    <title>CSS3 3D酷炫动画旋转相册</title>
+    <link rel="stylesheet" href="./xuanzhuan.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <style type="text/css">
+        body {
+            position: relative;
+            height: 100%;
+            font-size: 100px;
+        }
+
+        .bods {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bods p img {
+            width: 100%;
+            height: 100%;
+            /* width: 375px; */
+            /* height: 100px; */
+        }
+
+        #bgcolor {
+            width: 100%;
+            /* height: 100%; */
+            background-image: url('https://cdnoss.zhizuoh5.com/syspic/scene/FjJJ01xZKZzH2UgEhJ0L_6HaL8Yj.png?x-oss-process=style/w750&t=1');
+            background-size: 100%;
+            position: fixed;
+        }
+
+        .foot H1 {
+            font-size: 50px;
+        }
+
+        .box {
             margin: 100px auto;
             width: 90%;
             height: 450px;
@@ -36,161 +46,183 @@
             border: 10px solid;
             border-image: repeating-linear-gradient(-225deg, red 0, red 10px, transparent 10px, transparent 20px, #58a 20px, #58a 30px, transparent 30px, transparent 40px) 20;
         }
-        .fontsbut{
+
+        .fontsbut {
             width: 80%;
             height: 50px;
             border: #58a 3px solid;
             margin: auto;
             font-size: 40px;
         }
-        .fontsbut div{
+
+        .fontsbut div {
             text-align: center;
         }
 
-		</style>
-	</head>
-	<body >
-		
-		<div id="bgcolor" >
-			<div class="wrapper">
-				<ul class="max-box">
-					<li class="img1"></li>
-					<li class="img2"></li>
-					<li class="img3"></li>
-					<li class="img4"></li>
-					<li class="img5"></li>
-					<li class="img6"></li>
-				</ul>
-	
-				<ul class="min-box">
-					<li class="img1"></li>
-					<li class="img2"></li>
-					<li class="img3"></li>
-					<li class="img4"></li>
-					<li class="img5"></li>
-					<li class="img6"></li>
-				</ul>
-			</div>
+        .bg_audio {
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            overflow: hidden;
+            position: fixed;
+            top: 0.2rem;
+            right: 0.2rem;
+            z-index: 999;
+            background-image: url('./icon_Music2.svg');
+            background-size: 100% 100%;
+            animation: aa 3s linear infinite;
+        }
+    </style>
+</head>
 
-			<div class="bods">
-                <!-- <div class="bodytab">
-                    <div class="leftspan" >
-                        <span>第 <br>一</span>
-                    </div>
-                    <div class="rigimg">
-                        <img src="./images/vvc1.jpg" alt=""> 
-                    </div>
-                </div> -->
-			
-			</div>
-            <div class="foot">
-                <div class="box">
-                    <h1 class="element"></h1>
-                </div>
-                <div class=" fontsbut" >
-                    <div>
-                        <a href="./two.html"> 我们的故事</a>
-                       
-                    </div>
-                  
-                </div>
+<body>
+    <div class="bg_audio">
+        <div>哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+        <audio id="myaudio" style="opacity: 0" controls="controls" loop autoplay="autoplay" preload>
+            <source src="./preferenceLove.mp3" type="audio/mpeg">
+        </audio>
+        <audio src="./one.html" controls="controls" loop="loop" autoplay="autoplay"></audio>
+    </div>
+    <div id="audioTest">
+        <audio src="./preferenceLove.mp3" preload controls hidden id="music"></audio>
+    </div>
+    <div id="bgcolor">
+        <div class="wrapper">
+            <ul class="max-box">
+                <li class="img1"></li>
+                <li class="img2"></li>
+                <li class="img3"></li>
+                <li class="img4"></li>
+                <li class="img5"></li>
+                <li class="img6"></li>
+            </ul>
+
+            <ul class="min-box">
+                <li class="img1"></li>
+                <li class="img2"></li>
+                <li class="img3"></li>
+                <li class="img4"></li>
+                <li class="img5"></li>
+                <li class="img6"></li>
+            </ul>
+        </div>
+
+        <div class="bods">
+        </div>
+        <div class="foot">
+            <div class="box">
+                <h1 class="element"></h1>
             </div>
-            <div id="app">
-                <!-- <div>
-                    <div v-for="item  in  list ">
-                        <p>{{item.name}}</p>
-                        <p><img src="" alt=""> </p>
-                    </div>
-                </div> -->
-                <!-- <div class="bodytab"  v-for="item  in  list " >
-                    <div class="leftspan" >
-                        <span>{{item.name}}</span>
-                    </div>
-                    <div class="rigimg">
-                        <img :src=item.image alt=""> 
-                    </div>
-                </div> -->
-            </div>     
+            <div class=" fontsbut">
+                <div>
+                    <a href="./two.html"> 我们的故事</a>
 
-		</div>
-		
+                </div>
 
-	
-	</body>
-    <script>
-        new Vue({
-            el: '#app',
-            data: function () {
-                return {
-                    hello: "哈哈哈",
-                    list: [
-                        {
-                            name: '第一年',
-                            image: './images/supercar1.jpg'
-                        }, {
-                            name: '第二年',
-                            image: './images/supercar2.jpg'
-                        }, {
-                            name: '第三年',
-                            image: './images/supercar3.jpg'
-                        }, {
-                            name: '第四年',
-                            image: './images/supercar4.jpg'
-                        }, {
-                            name: '第五年',
-                            image: './images/supercar5.jpg'
-                        }
-                    ],
-                    meaage:'How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan'
+            </div>
+        </div>
+        <div id="app">
+
+        </div>
+
+    </div>
+
+
+
+</body>
+<script>
+        // var audo = document.getElementById('myaudio');
+        // audo.play();
+        // setTimeout(() => {
+        //     audo.pause()
+        //     audo.load()
+        // }, 10)
+</script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return {
+                hello: "哈哈哈",
+                list: [
+                    {
+                        name: '第一年',
+                        image: './images/supercar1.jpg'
+                    }, {
+                        name: '第二年',
+                        image: './images/supercar2.jpg'
+                    }, {
+                        name: '第三年',
+                        image: './images/supercar3.jpg'
+                    }, {
+                        name: '第四年',
+                        image: './images/supercar4.jpg'
+                    }, {
+                        name: '第五年',
+                        image: './images/supercar5.jpg'
+                    }
+                ],
+                meaage: 'How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan'
+            }
+        },
+        created() {
+            this.start();
+            this.playMusic()
+
+        },
+        methods: {
+            playMusic() {
+                var audio = document.getElementById('music')
+                if (audio !== null) {
+                    if (this.playFlag) {
+                        audio.pause()
+                        this.playFlag = false
+                    } else {
+                        audio.currentTime = 0
+                        audio.play()
+                        this.playFlag = true
+                    }
                 }
             },
-            created() {
-                this.start();
+            start() {
+                var typed = new Typed(".element", {
+                    /**
+                     * @property {array} strings 要键入的字符串
+                     * @property {string} stringsElement 包含字符串子元素的元素的ID
+                     */
+                    strings: ['How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan',],
+                    stringsElement: null,
+                    /**
+                     * @property {number} typeSpeed 输入速度，以毫秒为单位
+                     */
+                    typeSpeed: 100,
+                    /**
+                   
+                 
+                    /**
+                     * @property {string} attr 输入属性
+                     * 例如：输入占位符，值或仅HTML文本
+                     */
+                    attr: null,
+                    /**
+                     * 打字已经停止调用的回调函数
+                     * @param {number} arrayPos
+                     * @param {Typed} self
+                     */
+
+                    /**
+                     * 开始后调用的回调函数
+                     * @param {number} arrayPos
+                     * @param {Typed} self
+                     */
+
+                });
             },
-            methods: {
-                start() {
-                    var typed = new Typed(".element", {
-                        /**
-                         * @property {array} strings 要键入的字符串
-                         * @property {string} stringsElement 包含字符串子元素的元素的ID
-                         */
-                        strings: ['How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan',],
-                        stringsElement: null,
-                        /**
-                         * @property {number} typeSpeed 输入速度，以毫秒为单位
-                         */
-                        typeSpeed: 100,
-                        /**
-                         * @property {boolean} showCursor 是否显示光标
-                         * @property {string} cursorChar 光标的字符
-                         * @property {boolean} autoInsertCss 是否将光标和fadeOut的CSS插入HTML <head>
-                         */
-                        showCursor: true,
-                        cursorChar: '|',
-                        autoInsertCss: true,
-    
-                        /**
-                         * @property {string} attr 输入属性
-                         * 例如：输入占位符，值或仅HTML文本
-                         */
-                        attr: null,
-                        /**
-                         * 打字已经停止调用的回调函数
-                         * @param {number} arrayPos
-                         * @param {Typed} self
-                         */
-    
-                        /**
-                         * 开始后调用的回调函数
-                         * @param {number} arrayPos
-                         * @param {Typed} self
-                         */
-    
-                    });
-                },
-    
-            },
-        })
-    
-    </script>
+
+        },
+    })
+
+</script>
+
 </html>
