@@ -41,8 +41,8 @@ body {
     animation: rotate2 6s linear infinite;
 }
 .min-box li {
-    width: 405px;
-    height: 270px;
+    width: 400px;
+    height: 350px;
     position: absolute;
     left: 0;
     top: 0;
@@ -57,7 +57,7 @@ body {
 
 }
 .min-box .img1 {
-    background-image: url('images/supercar1.jpg');
+    background-image: url('images/vvc1.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -webkit-transform:translateZ(360px);
@@ -75,7 +75,7 @@ body {
     animation: img2 1s linear;
 }
 .min-box .img3 {
-    background-image: url('images/supercar3.jpg');
+    background-image: url('images/201.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -webkit-transform:rotateY(180deg) translateZ(360px);

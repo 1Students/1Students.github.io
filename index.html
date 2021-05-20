@@ -7,44 +7,69 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 	<script src="https://unpkg.com/vue/dist/vue.js"></script>
-	<link rel="./xuanzhuan.css" href="">
+	<!-- <link rel="./xuanzhuan.css" href=""> -->
+	<!-- <link rel="./xuanzhuan.css" href="style.css"> -->
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.bgcolor {
+			width: 100%;
+			height: 100%;
+			background-image: url('https://cdnoss.zhizuoh5.com/syspic/scene/FjJJ01xZKZzH2UgEhJ0L_6HaL8Yj.png?x-oss-process=style/w750&t=1');
+			background-size: 100% 100%;
+
+		}
+	</style>
 </head>
 
 <body>
+	<div class="bgcolor">
+		<span>哈哈哈</span>
+		<h1>欢迎访问我的主页</h1>
+		<p>我的服务器地址是/https://1students.github.io</p>
+		<h1>我们的故事</h1>
+		<h1> <a href="./one.html">点击</a></h1>
 
-	<h1>欢迎访问我的主页</h1>
-	<p>我的服务器地址是/https://1students.github.io</p>
-	<h1>我们的故事</h1>
-	<h1> <a href="./one.html">点击</a></h1>
-	<!-- <h1>第一年</h1>
-	<h1>第二年</h1>
-	<h1>第三年</h1>
-	<h1>第四年</h1>
-	<h1>第五年</h1> -->
-	<h2 class="element"></h2>
-	<audio id="myaudio" style="opacity: 0" controls="controls" loop autoplay="autoplay" preload>
-		<!-- https://cdnoss.zhizuoh5.com/syspic/mp3/o_1dfqubv0q23h18vt1qblt0b12rvg.mp3 -->
-		<source  src="./preferenceLove.mp3" type="audio/mpeg">
-	  </audio>
-
-	<div id="app">
-
-
-
-
-		{{hello}}
-		<div>
-			
-			<button @click="start"> 开始打字</button>
-			<div  v-for="item  in  list ">
-				<p>{{item.name}}</p>
-				<p><img src="" alt=""> </p>
+		<div class="wrapper">
+				<!-- <ul class="max-box">
+					<li class="img1"></li>
+					<li class="img2"></li>
+					<li class="img3"></li>
+					<li class="img4"></li>
+					<li class="img5"></li>
+					<li class="img6"></li>
+				</ul>
+	
+				<ul class="min-box">
+					<li class="img1"></li>
+					<li class="img2"></li>
+					<li class="img3"></li>
+					<li class="img4"></li>
+					<li class="img5"></li>
+					<li class="img6"></li>
+				</ul> -->
 			</div>
+		<h2 class="element"></h2>
+		<div id="app">
+			{{hello}}
+			<div>
+
+				<button @click="start"> 开始打字</button>
+				<div v-for="item  in  list ">
+					<p>{{item.name}}</p>
+					<p><img src="" alt=""> </p>
+				</div>
+			</div>
+
+
+
 		</div>
-	
-		
-	
 	</div>
+
+
 </body>
 <script>
 	new Vue({
@@ -73,7 +98,7 @@
 			}
 		},
 		created() {
-		
+
 		},
 		methods: {
 			start() {
@@ -115,17 +140,18 @@
 					 */
 
 				});
-			}
+			},
+
 		},
 	})
 
 </script>
 <script type="text/javascript">
-	 var audo = document.getElementById('myaudio');
-      audo.play();
-      document.addEventListener('WeixinJSBridgeReady', function() {
-        audo.play();
-      }, false);
+	var audo = document.getElementById('myaudio');
+	audo.play();
+	document.addEventListener('WeixinJSBridgeReady', function () {
+	audo.play();
+	}, false);
 </script>
 
 </html>
