@@ -5,6 +5,7 @@
 		<title>CSS3 3D酷炫动画旋转相册</title>
 		<link rel="stylesheet" href="./xuanzhuan.css">
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 		<style type="text/css">
 			.bods{
 				display: flex;
@@ -23,27 +24,28 @@
      		background-size: 100%;
 			position: fixed; 
            }
-           .bodytab{
-            display: flex;
-            justify-content: space-between;
+      
+           .foot H1{
+               font-size: 50px;
            }
-           .leftspan{
-               display: inline-block;
-               font-size: 80px;
-               margin: 0 auto; 
-                /* line-height: 56px;  */
-           }
-           .leftspan span{
-               width: 30px;
-           }
-           .rigimg{
-               width: 50%;
-               height: 400px;
-           }
-           .rigimg img{
-            width: 100%;
-				height: 100%;
-           }
+           .box {
+            margin: 100px auto;
+            width: 90%;
+            height: 450px;
+            padding: 10px;
+            border: 10px solid;
+            border-image: repeating-linear-gradient(-225deg, red 0, red 10px, transparent 10px, transparent 20px, #58a 20px, #58a 30px, transparent 30px, transparent 40px) 20;
+        }
+        .fontsbut{
+            width: 80%;
+            height: 50px;
+            border: #58a 3px solid;
+            margin: auto;
+            font-size: 40px;
+        }
+        .fontsbut div{
+            text-align: center;
+        }
 
 		</style>
 	</head>
@@ -70,32 +72,44 @@
 				</ul>
 			</div>
 
-			<!-- <div class="bods">
-                <div class="bodytab">
+			<div class="bods">
+                <!-- <div class="bodytab">
                     <div class="leftspan" >
                         <span>第 <br>一</span>
                     </div>
                     <div class="rigimg">
                         <img src="./images/vvc1.jpg" alt=""> 
                     </div>
+                </div> -->
+			
+			</div>
+            <div class="foot">
+                <div class="box">
+                    <h1 class="element"></h1>
                 </div>
-			</div> -->
+                <div class=" fontsbut" >
+                    <div>
+                        <a href="./two.html"> 我们的故事</a>
+                       
+                    </div>
+                  
+                </div>
+            </div>
             <div id="app">
-                <div>
-                    <!-- <button @click="start"> 开始打字</button> -->
-                    <!-- <div v-for="item  in  list ">
+                <!-- <div>
+                    <div v-for="item  in  list ">
                         <p>{{item.name}}</p>
                         <p><img src="" alt=""> </p>
-                    </div> -->
-                </div>
-                <div class="bodytab"  v-for="item  in  list " >
+                    </div>
+                </div> -->
+                <!-- <div class="bodytab"  v-for="item  in  list " >
                     <div class="leftspan" >
                         <span>{{item.name}}</span>
                     </div>
                     <div class="rigimg">
                         <img :src=item.image alt=""> 
                     </div>
-                </div>
+                </div> -->
             </div>     
 
 		</div>
@@ -126,11 +140,12 @@
                             name: '第五年',
                             image: './images/supercar5.jpg'
                         }
-                    ]
+                    ],
+                    meaage:'How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan'
                 }
             },
             created() {
-    
+                this.start();
             },
             methods: {
                 start() {
@@ -139,7 +154,7 @@
                          * @property {array} strings 要键入的字符串
                          * @property {string} stringsElement 包含字符串子元素的元素的ID
                          */
-                        strings: ['These are the default values...You know what you should do? You know what you should do?',],
+                        strings: ['How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan',],
                         stringsElement: null,
                         /**
                          * @property {number} typeSpeed 输入速度，以毫秒为单位
