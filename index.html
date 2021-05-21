@@ -80,9 +80,12 @@
 <body>
     <div class="bg_audio">
     </div>
-    <div id="audioTest">
+    <!-- <div id="audioTest">
         <audio src="./preferenceLove.mp3" preload controls hidden id="music"></audio>
-    </div>
+    </div> -->
+	<audio id="myaudio" style="opacity: 0" controls="controls" loop autoplay="autoplay" preload>
+		<source src="./preferenceLove.mp3" type="audio/mpeg">
+	  </audio>
     <div id="bgcolor">
         <div class="wrapper">
             <ul class="max-box">
@@ -128,12 +131,12 @@
 
 </body>
 <script>
-        // var audo = document.getElementById('myaudio');
-        // audo.play();
-        // setTimeout(() => {
-        //     audo.pause()
-        //     audo.load()
-        // }, 10)
+        var audo = document.getElementById('myaudio');
+        audo.play();
+        setTimeout(() => {
+            audo.pause()
+            audo.load()
+        }, 10)
 </script>
 
 <script>
