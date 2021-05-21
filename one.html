@@ -34,9 +34,9 @@
             position: fixed;
         }
 
-        .foot H1 {
+        /* .foot H2 {
             font-size: 50px;
-        }
+        } */
 
         .box {
             margin: 100px auto;
@@ -46,7 +46,9 @@
             border: 10px solid;
             border-image: repeating-linear-gradient(-225deg, red 0, red 10px, transparent 10px, transparent 20px, #58a 20px, #58a 30px, transparent 30px, transparent 40px) 20;
         }
-
+        .box p{
+            font-size: 40px;
+        }
         .fontsbut {
             width: 80%;
             height: 50px;
@@ -77,11 +79,6 @@
 
 <body>
     <div class="bg_audio">
-        <div>哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
-        <audio id="myaudio" style="opacity: 0" controls="controls" loop autoplay="autoplay" preload>
-            <source src="./preferenceLove.mp3" type="audio/mpeg">
-        </audio>
-        <audio src="./one.html" controls="controls" loop="loop" autoplay="autoplay"></audio>
     </div>
     <div id="audioTest">
         <audio src="./preferenceLove.mp3" preload controls hidden id="music"></audio>
@@ -115,8 +112,8 @@
             </div>
             <div class=" fontsbut">
                 <div>
-                    <a href="./two.html"> 我们的故事</a>
-
+                    <!-- <a href="./two.html"> 我们的故事</a> -->
+                    <p>521我爱你</p>
                 </div>
 
             </div>
@@ -145,24 +142,7 @@
         data: function () {
             return {
                 hello: "哈哈哈",
-                list: [
-                    {
-                        name: '第一年',
-                        image: './images/supercar1.jpg'
-                    }, {
-                        name: '第二年',
-                        image: './images/supercar2.jpg'
-                    }, {
-                        name: '第三年',
-                        image: './images/supercar3.jpg'
-                    }, {
-                        name: '第四年',
-                        image: './images/supercar4.jpg'
-                    }, {
-                        name: '第五年',
-                        image: './images/supercar5.jpg'
-                    }
-                ],
+              
                 meaage: 'How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan'
             }
         },
@@ -174,11 +154,14 @@
         methods: {
             playMusic() {
                 var audio = document.getElementById('music')
+                console.log(123)
                 if (audio !== null) {
                     if (this.playFlag) {
                         audio.pause()
+                        console.log(678)
                         this.playFlag = false
                     } else {
+                        console.log(345)
                         audio.currentTime = 0
                         audio.play()
                         this.playFlag = true
@@ -187,36 +170,10 @@
             },
             start() {
                 var typed = new Typed(".element", {
-                    /**
-                     * @property {array} strings 要键入的字符串
-                     * @property {string} stringsElement 包含字符串子元素的元素的ID
-                     */
-                    strings: ['How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan',],
-                    stringsElement: null,
-                    /**
-                     * @property {number} typeSpeed 输入速度，以毫秒为单位
-                     */
-                    typeSpeed: 100,
-                    /**
-                   
-                 
-                    /**
-                     * @property {string} attr 输入属性
-                     * 例如：输入占位符，值或仅HTML文本
-                     */
-                    attr: null,
-                    /**
-                     * 打字已经停止调用的回调函数
-                     * @param {number} arrayPos
-                     * @param {Typed} self
-                     */
-
-                    /**
-                     * 开始后调用的回调函数
-                     * @param {number} arrayPos
-                     * @param {Typed} self
-                     */
-
+                    strings: ["This is a miss, a miss for love, please read it carefully",
+                    "How long have we known each other, how many winds and rains we have experienced, do you still remember our stories?, I wrote several chapters of our story, I love you, 520 happy, my Huanhuan"], //输入内容, 支持html标签
+                    typeSpeed: 150, //打字速度
+                    backSpeed: 50 //回退速度
                 });
             },
 
