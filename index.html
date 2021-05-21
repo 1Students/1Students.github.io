@@ -131,12 +131,11 @@
 
 </body>
 <script>
-        var audo = document.getElementById('myaudio');
-        audo.play();
-        setTimeout(() => {
-            audo.pause()
-            audo.load()
-        }, 10)
+      var audo = document.getElementById('myaudio');
+    audo.play();
+    document.addEventListener('WeixinJSBridgeReady', function () {
+      audo.play();
+    }, false);
 </script>
 
 <script>
